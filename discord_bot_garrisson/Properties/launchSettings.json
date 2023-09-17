@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "discord_bot_garrisson": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
