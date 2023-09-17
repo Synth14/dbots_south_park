@@ -9,7 +9,7 @@ COPY ["discord_bot_garrisson/discord_bot_garrisson.csproj", "discord_bot_garriss
 COPY ["Bot_common/Bot_common.csproj", "Bot_common/"]
 RUN dotnet restore "discord_bot_garrisson/discord_bot_garrisson.csproj"
 COPY . .
-WORKDIR "/src"
+WORKDIR "/src/discord_bot_garrisson"
 RUN dotnet build "discord_bot_garrisson.csproj" -c Release -o /app/build
 
 FROM build AS publish
