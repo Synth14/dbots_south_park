@@ -23,6 +23,6 @@ jobs:
     - name: Build and publish Docker image
       run: |
         dotnet publish -c Release
-        docker build -f Dockerfile -t discord_bot_garrisson:latest .
+        docker build -f /discord_bot_garrisson/Dockerfile -t discord_bot_garrisson:latest .
         docker tag discord_bot_garrisson:latest ${{secrets.DOCKER_USERNAME}}/discord_bot_garrisson:latest
         docker push ${{secrets.DOCKER_USERNAME}}/discord_bot_garrisson:latest
