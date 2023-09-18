@@ -6,7 +6,7 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["discord_bot_garrisson/discord_bot_garrisson.csproj", "discord_bot_garrisson/"]
-COPY ["Bot_common/Bot_common.csproj", "Bot_common/"]
+COPY ["bot_common/bot_common.csproj", "bot_common/"]
 RUN dotnet restore "discord_bot_garrisson/discord_bot_garrisson.csproj"
 COPY . .
 WORKDIR "/src/discord_bot_garrisson"
