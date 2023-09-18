@@ -14,7 +14,6 @@ namespace Bot_common
             _client.Log += LogAsync;
             _client.Ready += ReadyAsync;
             _client.MessageReceived += MessageReceivedAsync;
-
             InitializeAsync(token).GetAwaiter().GetResult();
 
         }

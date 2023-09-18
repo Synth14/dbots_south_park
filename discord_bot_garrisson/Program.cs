@@ -18,7 +18,6 @@ class Program
         Ascii.Garrisson();
         Assembly thisAssem = typeof(Program).Assembly;
         AssemblyName thisAssemName = thisAssem.GetName();
-
         Version ver = thisAssemName.Version;
         Console.WriteLine($"Dbot_south_park version: {ver}");
 
