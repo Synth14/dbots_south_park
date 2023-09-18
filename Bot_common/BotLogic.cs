@@ -31,7 +31,7 @@ namespace Bot_common
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
         }
-               
+
         private Task LogAsync(LogMessage log)
         {
             Console.WriteLine(log);
@@ -42,7 +42,7 @@ namespace Bot_common
         {
 
             // Vérifiez que le message n'est pas envoyé par le bot lui-même ou par Monsieur Esclave
-            if ((message.Author.Id == _client.CurrentUser.Id) || message.Author.IsBot)
+            if (message.Author.IsBot)
                 return;
             string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
             string jsonContent = File.ReadAllText(fullPath);
@@ -90,8 +90,10 @@ namespace Bot_common
         }
         private async Task InitializeAsync(string token)
         {
+           
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
+
         }
 
 
@@ -103,17 +105,14 @@ namespace Bot_common
 
         private async Task MessageReceivedAsync(SocketMessage message)
         {
+            Bot monsieurEsclave = new();
+            monsieurEsclave.Id = BotIdentifier.MonsieurEsclaveID;
+            Channels channels = new();
+            monsieurEsclave.authorizedChannels[0] = channels.AideAuxDevoirsChan;
+            channels.ChannelPermission(message, channels.AideAuxDevoirsChan, monsieurEsclave.Id);
 
-            // Vérifiez que le message n'est pas envoyé par le bot lui-même
-            
             if (message.Content.Contains("Monsieur Esclave", StringComparison.OrdinalIgnoreCase))
             {
-                string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
-                string jsonContent = File.ReadAllText(fullPath);
-                Channels channels = JsonSerializer.Deserialize<Channels>(jsonContent);
-
-                if (message.Channel is SocketTextChannel textChannel && textChannel.Id != channels.AideAuxDevoirsChan)
-                    return;
 
                 Repliques slaveReplies = new Repliques();
                 var randomMessages = slaveReplies.GetEntries_M_Esclave(message.Author.GlobalName);
