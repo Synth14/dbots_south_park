@@ -28,9 +28,29 @@
                 {20, "J'ai l'impression que je ne dois pas être le seul à vouloir tuer Kathie Lee Gifford" },
                 {21, "Approche, allez, sale pétasse..!"},
                 {22, "Je fais semblant pour attirer les nanas, trou du cul!" },
-                {23, string.Format("{0}, Stanley peut conduire notre équipe à la victoire contre les cow-boys de middle park pour la première fois depuis 30 ans, il est donc naturel de le traiter mieux que toi parce qu'il vaut mieux que toi",globalUsername) }
+                {23, string.Format("{0}, Stanley peut conduire notre équipe à la victoire contre les cow-boys de middle park pour la première fois depuis 30 ans, il est donc naturel de le traiter mieux que toi parce qu'il vaut mieux que toi",globalUsername) },
+                {24,"Veuillez dire bonjour à Monsieur Esclave"},
+                {25,"Donc Monsieur Esclave est mon assistant culturel, ou comme j'ai coutume de le surnommer : mon assist'encule"},
+                {26,"Ne pensez pas que la fin de l'année scolaire sera facile.Elle sera longue et dure, très très longue, et très très dure."},
+                {27,"Prenez ça Monsieur Esclave!"},
+                {28,"Newton découvrit que pour toute action, il y a réaction, alors que croyez vous qu'il va se passer quand je vais introduire l'élément gerbille dans la chaleur endothermique du cul de Monsieur Esclave? Voyons cela."}
+
             };
             return replies;
         }
+        public Dictionary<int, string> GetEntries_M_Esclave(string globalUsername)
+        {
+            return new Dictionary<int, string> {
+                
+                {1,"OH!"},
+                {2,"Oh! Oh! Ça fait mal!"},
+                {3,"C'est loin d'être le premier animal que je me mets dans le cul"},
+                {4,"Jamais je n'aurais dû mettre tous ces animaux dans mon cul!"},
+                {5,"Oh, je sens qu'on va s'éclater"},
+                {6, "Oh seigneur dieu!"}
+            };
+        }
     }
 }
+
+

@@ -1,13 +1,15 @@
 ﻿using Bot_common;
-using Discord;
 using Discord.WebSocket;
 using discord_bot_garrisson;
 using System.Reflection;
-using System.Text.Json;
+
 
 class Program
 {
     private DiscordSocketClient? _client;
+    private BotLogic_Garrisson _bot1;
+    private BotLogic_M_Esclave _bot2;
+
     static void Main(string[] args) => new Program().RunBotAsync().GetAwaiter().GetResult();
 
 
@@ -18,51 +20,33 @@ class Program
         AssemblyName thisAssemName = thisAssem.GetName();
 
         Version ver = thisAssemName.Version;
-        Console.WriteLine($"Discord_bot_Garrisson version: {ver}");
+        Console.WriteLine($"Dbot_south_park version: {ver}");
 
-        _client = new DiscordSocketClient();
-        _client.Log += LogAsync;
-        _client.Ready += ReadyAsync;
-        _client.MessageReceived += MessageReceivedAsync;
-        string discordToken = Environment.GetEnvironmentVariable("DISCORD_BOT_TOKEN");
-        await _client.LoginAsync(TokenType.Bot, discordToken);
-        await _client.StartAsync();
+        _bot1 = new BotLogic_Garrisson(Environment.GetEnvironmentVariable("DISCORD_BOT_TOKEN_GAR"));
+        _bot2 = new BotLogic_M_Esclave(Environment.GetEnvironmentVariable("DISCORD_BOT_TOKEN_SLAVE"));
+
+        _bot2._client.Ready += Bot2ReadyAsync;
+        _bot1._client.Ready+= Bot1ReadyAsync;
+
         await Task.Delay(-1);
     }
 
-    private Task LogAsync(LogMessage log)
-    {
-        Console.WriteLine(log);
-        return Task.CompletedTask;
-    }
-
-    private Task ReadyAsync()
+    private async Task Bot1ReadyAsync()
     {
         Console.WriteLine("Garrisson est prêt.");
-        return Task.CompletedTask;
+
+        // Start Bot 1 on a separate thread
+        Thread bot1Thread = new Thread(() => _bot1.StartBot());
+        bot1Thread.Start();
     }
 
-    private async Task MessageReceivedAsync(SocketMessage message)
+    private async Task Bot2ReadyAsync()
     {
+        Console.WriteLine("M. Esclave est prêt.");
 
-        // Vérifiez que le message n'est pas envoyé par le bot lui-même
-        if (message.Author.Id == _client.CurrentUser.Id)
-            return;
-        string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
-        string jsonContent = File.ReadAllText(fullPath);
-        Channels channels = JsonSerializer.Deserialize<Channels>(jsonContent);
-
-        if (message.Channel is SocketTextChannel textChannel && textChannel.Id != channels.AideAuxDevoirsChan)
-            return;
-        Repliques garReplies = new Repliques();
-        var randomMessages = garReplies.GetEntries_Garrisson(message.Author.GlobalName);
-
-        Random random = new Random();
-        int randomKey = random.Next(1, randomMessages.Count + 1);
-        if (randomMessages.TryGetValue(randomKey, out string randomMessage))
-        {
-            // Envoyez le message aléatoire dans le même canal où le message a été reçu
-            await message.Channel.SendMessageAsync(randomMessage);
-        }
+        // Start Bot 2 on a separate thread
+        Thread bot2Thread = new Thread(() => _bot2.StartBot());
+        bot2Thread.Start();
     }
+  
 }
