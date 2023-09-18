@@ -44,14 +44,14 @@ namespace Bot_common
             // Vérifiez que le message n'est pas envoyé par le bot lui-même ou par Monsieur Esclave
             if (message.Author.IsBot)
                 return;
-            string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
-            string jsonContent = File.ReadAllText(fullPath);
-            Channels channels = JsonSerializer.Deserialize<Channels>(jsonContent);
+            Bot monsieurGarrisson = new();
+            monsieurGarrisson.Id = BotIdentifier.MonsieurGarrissonID;
+            Channels channels = new();
+            monsieurGarrisson.authorizedChannels[0] = channels.AideAuxDevoirsChan;
+            channels.ChannelRights(message, channels.AideAuxDevoirsChan, monsieurGarrisson.Id);
 
-            if (message.Channel is SocketTextChannel textChannel && textChannel.Id != channels.AideAuxDevoirsChan)
-                return;
             Repliques garReplies = new Repliques();
-            var randomMessages = garReplies.GetEntries_Garrisson(message.Author.GlobalName);
+            var randomMessages = garReplies.GetEntries(monsieurGarrisson,message.Author.GlobalName);
 
             Random random = new Random();
             int randomKey = random.Next(1, randomMessages.Count + 1);
@@ -109,13 +109,13 @@ namespace Bot_common
             monsieurEsclave.Id = BotIdentifier.MonsieurEsclaveID;
             Channels channels = new();
             monsieurEsclave.authorizedChannels[0] = channels.AideAuxDevoirsChan;
-            channels.ChannelPermission(message, channels.AideAuxDevoirsChan, monsieurEsclave.Id);
+            channels.ChannelRights(message, channels.AideAuxDevoirsChan, monsieurEsclave.Id);
 
             if (message.Content.Contains("Monsieur Esclave", StringComparison.OrdinalIgnoreCase))
             {
 
                 Repliques slaveReplies = new Repliques();
-                var randomMessages = slaveReplies.GetEntries_M_Esclave(message.Author.GlobalName);
+                var randomMessages = slaveReplies.GetEntries(monsieurEsclave,message.Author.GlobalName);
 
                 Random random = new Random();
                 int randomKey = random.Next(1, randomMessages.Count + 1);

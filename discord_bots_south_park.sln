@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "discord_bot_garrisson", "discord_bot_garrisson\discord_bot_garrisson.csproj", "{78292EB5-BFD4-40BE-AA06-EE17E8456833}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bot_common", "Bot_common\Bot_common.csproj", "{4A0BBF55-1A9C-4ED0-934D-3027D0A73583}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bot_common", "Bot_common\bot_common.csproj", "{4A0BBF55-1A9C-4ED0-934D-3027D0A73583}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

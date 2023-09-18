@@ -8,8 +8,8 @@ namespace Bot_common
 {
     public static class BotIdentifier
     {
-        public static ulong MonsieurEsclaveID = 1153372652149416048;
-        public static ulong MonsieurGarrissonID = 1152906364218245140;
+        public const ulong MonsieurEsclaveID = 1153372652149416048;
+        public const ulong MonsieurGarrissonID = 1152906364218245140;
 
     }
 }

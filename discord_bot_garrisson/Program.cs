@@ -26,7 +26,7 @@ class Program
         _bot2 = new BotLogic_M_Esclave(Environment.GetEnvironmentVariable("DISCORD_BOT_TOKEN_SLAVE"));
 
         _bot2._client.Ready += Bot2ReadyAsync;
-        _bot1._client.Ready+= Bot1ReadyAsync;
+        _bot1._client.Ready += Bot1ReadyAsync;
 
         await Task.Delay(-1);
     }
