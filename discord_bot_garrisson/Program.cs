@@ -1,4 +1,4 @@
-﻿using Bot_common;
+﻿using bot_common;
 using Discord.WebSocket;
 using discord_bot_garrisson;
 using System.Reflection;

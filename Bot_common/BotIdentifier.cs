@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bot_common
+namespace bot_common
 {
     public static class BotIdentifier
     {

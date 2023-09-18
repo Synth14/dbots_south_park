@@ -2,7 +2,7 @@
 using Discord.WebSocket;
 using System.Text.Json;
 
-namespace Bot_common
+namespace bot_common
 {
     public class BotLogic_Garrisson
     {

@@ -1,4 +1,4 @@
-﻿namespace Bot_common
+﻿namespace bot_common
 {
     public class Repliques
     {
