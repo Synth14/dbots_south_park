@@ -2,13 +2,14 @@
   "Channels": {
     "AideAuxDevoirsChan": 831280945947607096
   },
-  "BotsRights": {
-    "MonsieurGarrissonID": {
-      "AuthorizedChannels": [ "/Channels/AideAuxDevoirsChan" ]
-    },
-    "MonsieurEsclaveID": {
-      "AuthorizedChannels": [ "/Channels/AideAuxDevoirsChan" ]
+  
+    "BotsRights": {
+      "MonsieurGarrissonID": {
+        "AuthorizedChannels": [ "/Channels/AideAuxDevoirsChan" ]
+      },
+      "MonsieurEsclaveID": {
+        "AuthorizedChannels": [ "/Channels/AideAuxDevoirsChan" ]
+      }
     }
-  }
- 
+  
 }

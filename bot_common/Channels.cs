@@ -7,7 +7,7 @@ public class Channels
 {
     public ulong AideAuxDevoirsChan { get; set; }
 
-    public bool HasChannelRights(SocketMessage message, string botName)
+    public static bool HasChannelRights(SocketMessage message, string botName)
     {
         string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
         string jsonContent = File.ReadAllText(fullPath);

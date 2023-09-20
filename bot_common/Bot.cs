@@ -59,8 +59,7 @@ public class Bot
         {
             randomMessages = repliques.GetEntries(this.botId, message.Author.GlobalName);
         }
-        Channels channels = new();
-        var isAuthorized = channels.HasChannelRights(message, this.Name);
+        var isAuthorized = Channels.HasChannelRights(message, this.Name);
 
         // If the bot is not authorized, return.
         if (!isAuthorized)
