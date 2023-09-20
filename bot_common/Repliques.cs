@@ -2,12 +2,12 @@
 {
     public class Repliques
     {
-        public Dictionary<int, string> GetEntries(Bot bot, string globalUsername)
+        public Dictionary<int, string> GetEntries(ulong Id, string globalUsername)
         {
-            Dictionary<int, string> replies = new ();
-            switch (bot.Id)
+            Dictionary<int, string> replies;
+            switch (Id)
             {
-                case BotIdentifier.MonsieurGarrissonID:
+                case Bot.MonsieurGarrissonID:
                     replies = new Dictionary<int, string>
                     {
                         {1, "Oh oh alerte aux gogoles ! Alerte aux gogoles les enfants ! Toi aussi tu aimes les spaghettis volants monstrueux, pauvre imbécile ?"},
@@ -41,7 +41,7 @@
 
                     };
                     break;
-                case BotIdentifier.MonsieurEsclaveID:
+                case Bot.MonsieurEsclaveID:
                     replies = new Dictionary<int, string>
                     {
                         {1,"OH!"},
