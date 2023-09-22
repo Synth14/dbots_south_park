@@ -55,7 +55,7 @@ public class Bot
             if (message.Content.Contains("Monsieur Esclave"))
                 randomMessages = repliques.GetEntries(this.botId, message.Author.GlobalName);
         }
-        else
+        else if (!message.Author.IsBot)
         {
             randomMessages = repliques.GetEntries(this.botId, message.Author.GlobalName);
         }
