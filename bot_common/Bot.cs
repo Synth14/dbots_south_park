@@ -59,13 +59,13 @@ public class Bot
         {
             randomMessages = repliques.GetEntries(this.botId, message.Author.GlobalName);
         }
-        var isAuthorized = Channels.HasChannelRights(message, this.Name);
+        //var isAuthorized = Channels.HasChannelRights(message, this.Name);
 
         // If the bot is not authorized, return.
-        if (!isAuthorized)
-        {
-            return;
-        }
+        //if (!isAuthorized)
+        //{
+        //    return;
+        //}
         Random random = new Random();
         int randomKey = random.Next(1, randomMessages.Count + 1);
         
