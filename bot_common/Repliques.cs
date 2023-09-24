@@ -37,7 +37,8 @@
                         {25,"Donc Monsieur Esclave est mon assistant culturel, ou comme j'ai coutume de le surnommer : mon assist'encule"},
                         {26,"Ne pensez pas que la fin de l'année scolaire sera facile.Elle sera longue et dure, très très longue, et très très dure."},
                         {27,"Prenez ça Monsieur Esclave!"},
-                        {28,"Newton découvrit que pour toute action, il y a réaction, alors que croyez vous qu'il va se passer quand je vais introduire l'élément gerbille dans la chaleur endothermique du cul de Monsieur Esclave? Voyons cela."}
+                        {28,"Newton découvrit que pour toute action, il y a réaction, alors que croyez vous qu'il va se passer quand je vais introduire l'élément gerbille dans la chaleur endothermique du cul de Monsieur Esclave? Voyons cela."},
+                        {29,"Et donc maintenant les enfants, au lieu de vous dire rendez-moi vos dessins, je pourrai vous dire \"rendez-moi vos merdes\"}
 
                     };
                     break;
