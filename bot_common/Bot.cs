@@ -55,17 +55,22 @@ public class Bot
             if (message.Content.Contains("Monsieur Esclave"))
                 randomMessages = repliques.GetEntries(this.botId, message.Author.GlobalName);
         }
-        else if (!message.Author.IsBot)
+        else if (!message.Author.IsBot && !message.Content.Contains("Monsieur Esclave"))
         {
             randomMessages = repliques.GetEntries(this.botId, message.Author.GlobalName);
         }
-        //var isAuthorized = Channels.HasChannelRights(message, this.Name);
+        else
+        {
+            return;
+        }
+        var channels = new Channels();
+        var isAuthorized = channels.HasChannelRights(message, this.Name);
 
-        // If the bot is not authorized, return.
-        //if (!isAuthorized)
-        //{
-        //    return;
-        //}
+        //If the bot is not authorized, return.
+        if (!isAuthorized)
+        {
+            return;
+        }
         Random random = new Random();
         int randomKey = random.Next(1, randomMessages.Count + 1);
         

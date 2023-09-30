@@ -5,10 +5,10 @@
   
     "BotsRights": {
       "MonsieurGarrissonID": {
-        "AuthorizedChannels": [ "/Channels/AideAuxDevoirsChan" ]
+        "AuthorizedChannels": [ "AideAuxDevoirsChan" ]
       },
       "MonsieurEsclaveID": {
-        "AuthorizedChannels": [ "/Channels/AideAuxDevoirsChan" ]
+        "AuthorizedChannels": [ "AideAuxDevoirsChan" ]
       }
     }
   
