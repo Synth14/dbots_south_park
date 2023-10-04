@@ -41,7 +41,11 @@
                         {29,"Et donc maintenant les enfants, au lieu de vous dire rendez-moi vos dessins, je pourrai vous dire \"rendez-moi vos merdes\""},
                         {30,"Je ne sais pas pourquoi, j'ai pris de l'assurance, j'ai pris confiance en moi, j'ai décidé de quitter l'enseignement pour pouvoir faire tout ce que j'ai rêvé de faire : draguer et sauter des gonzesses"},
                         {31, string.Format("Bon sang, je vais vour dire {0}, être un sex-symbol, c'est marrant 5 minutes mais à la longue ça devient fatiguant.", globalUsername)},
-                        {32, "Toi tu tais! Tu te tais sinon j'te crève!"}
+                        {32, "Toi tu tais! Tu te tais sinon j'te crève!"},
+                        {33, "Je vais emporter un peu d'Eric Roberts dans un doggy-bag, est-ce que quelqu'un d'autre en veut?"},
+                        {34,"BZZ, c'est faux! Essaye encore, abruti! HAHAHA HAHAHA!"},
+                        {35,"Sales petits ***, où avez-vous mis M. Tock? Mais qu'est ce que vous croyez, bien sûr l'année scolaire est finie pour tous les autres, mais pas pour vous sales petits enfoirés, pas pour vous tant que vous ne m'aurez pas rendu M. Tock!"},
+                        {36,"QUOI? Vous me faites des avances ou quoi? Je peux vous assurer que je suis à 100% pas gay du tout. M. Tock d'un autre côté..il a parfois des fantasmes de relations homosexuelles, parfois M.Tock rêve qu'il se retrouve dans un sauna avec Brett fevre, uniquement vêtu d'une canette de bière"}
 
                     };
                     break;
