@@ -38,7 +38,10 @@
                         {26,"Ne pensez pas que la fin de l'année scolaire sera facile.Elle sera longue et dure, très très longue, et très très dure."},
                         {27,"Prenez ça Monsieur Esclave!"},
                         {28,"Newton découvrit que pour toute action, il y a réaction, alors que croyez vous qu'il va se passer quand je vais introduire l'élément gerbille dans la chaleur endothermique du cul de Monsieur Esclave? Voyons cela."},
-                        {29,"Et donc maintenant les enfants, au lieu de vous dire rendez-moi vos dessins, je pourrai vous dire \"rendez-moi vos merdes\""}
+                        {29,"Et donc maintenant les enfants, au lieu de vous dire rendez-moi vos dessins, je pourrai vous dire \"rendez-moi vos merdes\""},
+                        {30,"Je ne sais pas pourquoi, j'ai pris de l'assurance, j'ai pris confiance en moi, j'ai décidé de quitter l'enseignement pour pouvoir faire tout ce que j'ai rêvé de faire : draguer et sauter des gonzesses"},
+                        {31, string.Format("Bon sang, je vais vour dire {0}, être un sex-symbol, c'est marrant 5 minutes mais à la longue ça devient fatiguant.")},
+                        {32, "Toi tu tais! Tu te tais sinon j'te crève!"}
 
                     };
                     break;
