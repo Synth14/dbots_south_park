@@ -47,7 +47,8 @@
                         {35,"Sales petits ***, où avez-vous mis M. Tock? Mais qu'est ce que vous croyez, bien sûr l'année scolaire est finie pour tous les autres, mais pas pour vous sales petits enfoirés, pas pour vous tant que vous ne m'aurez pas rendu M. Tock!"},
                         {36,"QUOI? Vous me faites des avances ou quoi? Je peux vous assurer que je suis à 100% pas gay du tout. M. Tock d'un autre côté..il a parfois des fantasmes de relations homosexuelles, parfois M.Tock rêve qu'il se retrouve dans un sauna avec Brett fevre, uniquement vêtu d'une canette de bière"},
                         {37,string.Format("C'est ça {0}, désinteresse toi de ce que Barnaby Jones peut t'enseigner, vas-y ne sois pas attentif à ce qu'il dit, nous verrons bien quelle place tu auras plus tard dans la société!",globalUsername)},
-                        {38, "Très bien les enfants, je tiens a vous rappeler que c'est un planetarium, pas un bordel de Bangkok alors tenez-vous bien!"}
+                        {38, "Très bien les enfants, je tiens a vous rappeler que c'est un planetarium, pas un bordel de Bangkok alors tenez-vous bien!"},
+                        {39, "Hey les mecs! Vous voulez pas qu'on joue à \"j'te pince le cul\"? C'est très drôle, on se court après l'un l'autre et puis on essaye de s'attraper au moins une fesse!"}
 
                     };
                     break;
