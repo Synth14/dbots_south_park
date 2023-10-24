@@ -52,7 +52,7 @@ public class Bot
         Dictionary<int, string> randomMessages = new();
         if (this.botId == MonsieurEsclaveID)
         {
-            if (message.Content.Contains("Monsieur Esclave"))
+            if (message.Content.Contains("Esclave"))
                 randomMessages = repliques.GetEntries(this.botId, message.Author.GlobalName);
         }
         else if (!message.Author.IsBot && !message.Content.Contains("Esclave"))
